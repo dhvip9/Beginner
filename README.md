@@ -1,2 +1,2 @@
 # Beginner
-100 Days Challenge
+First 14 Days with python
