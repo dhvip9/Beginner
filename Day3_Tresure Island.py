@@ -46,7 +46,9 @@ if direction == "left":
       print("     [ GAME OVER! ]      ")  
 
   else:
-    print("     [ GAME OVER! ]      ") 
+    print("You Attacked by Trout")
+    print("   [ GAME OVER! ]    ") 
 
 else:
-    print("     [ GAME OVER! ]      ") 
+    print("You Fall Into a Hole.")
+    print("   [ GAME OVER! ]    ") 
