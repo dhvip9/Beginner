@@ -1,4 +1,5 @@
-import random  
+import random 
+from replit import clear 
 
 def if_life(life):
     if life == 5:
@@ -104,8 +105,9 @@ for i in range(len(spelling)):
 Life = 6
 while True:
     user_letter = input("Guess a Letter :- ").lower()
+    clear()
     Index = 0
-    
+
     if user_letter in find_word:
         print(f"You've Already Guessed {user_letter}")     
     elif user_letter not in spelling:
@@ -120,7 +122,7 @@ while True:
         find_word[Index] = i
   
     final_word = " ".join(find_word)
-    print(f"      [ {final_word} ]        ")
+    print(f"[  {final_word}  ]")
 
     print(if_life(Life))
   
@@ -131,4 +133,4 @@ while True:
       print("[ YOUR MAN DIED! ]")
       break
       
-    print("+--------------------------------------------------+")
+    print("+--------------------------------------------------+") 
