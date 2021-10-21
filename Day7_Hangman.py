@@ -95,7 +95,7 @@ words = ["dhvip", "ardvark", "acknowledgement", "enclose", "baboon", "camel", "f
 
 spelling = list(random.choice(words))
 copy_spell = " ".join(spelling)
-# print(copy_spell)
+print(copy_spell)
 
 find_word = []
 for i in range(len(spelling)):
@@ -105,9 +105,14 @@ Life = 6
 while True:
     user_letter = input("Guess a Letter :- ").lower()
     Index = 0
-    if user_letter not in spelling:
+    
+    if user_letter in find_word:
+        print(f"You've Already Guessed {user_letter}")     
+    elif user_letter not in spelling:
         print(f"You Guessed {user_letter}, That's Not in Word. You Lose a Life")
-        Life -= 1    
+        Life -= 1 
+   
+
     for i in spelling:
       if i == user_letter:
         Index = spelling.index(i)
