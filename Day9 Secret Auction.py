@@ -20,8 +20,11 @@ def bid_winner(participate):
 	for key in participate:
 		bid_amt = participate[key]
 		if bid_amt > win_amt:
-			win_amt = bid_amt
-	print(f"<[ The Winner is | {key} | With a Bid of | ${win_amt} | ]>")		
+			win_amt = bid_amt		
+	for key_1 in participate:
+		all_bid_amt = participate[key_1]
+		if all_bid_amt == win_amt:
+			print(f"<[ The Winner is | {key_1} | With a Bid of | ${win_amt} | ]>")		
 
 logo()
 print("Wellcome To Secret Auction")	
@@ -36,6 +39,9 @@ while continue_bid:
 	print()
 	next_bid = input("| Are there any other bidder? |\n[ Type |y| or |n| ].\n>> ").lower()
 	if next_bid == "n":
+		clear()
+		logo()
+		bid_winner(bid_participate)
 		continue_bid = False
 	elif next_bid == "y":
 		continue_bid = True
@@ -45,8 +51,6 @@ while continue_bid:
 	else:
 		print("Select Valid Option")	
 
-clear()
-logo()
-bid_winner(bid_participate)
+
 	
 
